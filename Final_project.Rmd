@@ -61,10 +61,12 @@ This is a reproduction of experiment 1 of For 5-Month-Old Infants, Melodies Are 
 #Introduction
 The purpose of this (re)-analysis is to see whether or not it is possible to reproduce the results of experiment 1 of "For 5-Month-Old Infants, Melodies Are Social" by Samuel A. Mehr, Lee Ann Song, Elizabeth S. Spelke.
 
+In their experiment, they were interested in the important social role singing and melodies have had across the ages, especially before the time when it was recorded with audio. As in the past and even in many present societies different songs have various social purposes, what could they mean to newborn babies? This study has several experiments comparing melodies and how they get transmitted, whether by parents, toys, or strangers, and what sort of effect they have on the attention spans of the babies.  
+
 
 ## Participants
 
-There were 32 participants
+There were 32 participants, all of which were 5 month old infants. Parents of the infants were used to teach the songs to their children.
 
 ## Material
 
@@ -80,10 +82,12 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 # Results
 
+Reanalysis of experiment one shows that babies paid more attention to the song that was sung by their parents, and supports the hypothesis, as if there were no effect they would have just stared at both singers at relatively equivalent rates with no increase 
 
-
+(need power anaylsis to analyse effect size and how participant size realtes to the results)
+ 
 # Discussion
-
+(Need to do a power analysis before I get into the discussion part)
 
 \newpage
 
