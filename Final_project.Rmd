@@ -1,51 +1,32 @@
 ---
-title             : "The title"
-shorttitle        : "Title"
+title             : "Reproducing the Report of "
+shorttitle        : "Something Analyis"
 
 author: 
-  - name          : "First Author"
+  - name          : "Shawn Vizganr"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
-    address       : "Postal address"
-    email         : "my@email.com"
-    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
-      - Conceptualization
-      - Writing - Original Draft Preparation
-      - Writing - Review & Editing
-  - name          : "Ernst-August Doelle"
+    address       : "2900 Bedford Avenue"
+    email         : "sv942@hunter.cuny.edu"
+    
+  
     affiliation   : "1,2"
     role:
       - Writing - Review & Editing
 
 affiliation:
   - id            : "1"
-    institution   : "Wilhelm-Wundt-University"
-  - id            : "2"
-    institution   : "Konstanz Business School"
+    institution   : "Brooklyn College City University of New York"
 
 authornote: |
-  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
-
-  Enter author note here.
+ Current Undergraduate at Brooklyn college, nothing special here
 
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
-  
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  
-  One or two sentences to put the results into a more **general context**.
-  
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+This is a reanalysis of the first experiment of something something baby voice recognition
   
   <!-- https://tinyurl.com/ybremelq -->
   
-keywords          : "keywords"
+keywords          : "sound, babies"
 wordcount         : "X"
 
 bibliography      : ["r-references.bib"]
@@ -72,18 +53,26 @@ r_refs("r-references.bib")
 # Seed for random number generation
 set.seed(42)
 knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+
+
 ```
+#Abstract
+This is a reproduction of experiment 1 of For 5-Month-Old Infants, Melodies Are Social" by Samuel A. Mehr, Lee Ann Song, Elizabeth S. Spelke. In their experiment, they had the parents of 32 infants learn a song and later sing it to their children.On a later date the babies attention was tracked for how long they focused on the song their parents sang or a novel song, both songs being sung by an unfamiliar person. Results found that Babies spent more time looking at people who sang familiar songs than those who didn't.
+#Introduction
+The purpose of this (re)-analysis is to see whether or not it is possible to reproduce the results of experiment 1 of "For 5-Month-Old Infants, Melodies Are Social" by Samuel A. Mehr, Lee Ann Song, Elizabeth S. Spelke.
 
-
-
-# Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
 ## Participants
 
+There were 32 participants
+
 ## Material
 
+The details of the experiment are reported in Mehr SA 2016
+
 ## Procedure
+
+Parents were taught a song at the lab, and they would sing it to their children. At the lab, children were later introduced to two novel people over a screen, one who sang the sang they knew and one who didn', both of which were on screens that had recorded video of both singing their respective songs. Children were tracked for who they stared at longer. 
 
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses.
@@ -91,12 +80,19 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 # Results
 
+
+
 # Discussion
 
 
 \newpage
 
 # References
+
+  
+    1. Mehr SA, Song LA, Spelke ES. For 5-Month-Old Infants, Melodies Are Social. Psychological Science. 2016;27(4):486-501. doi:10.1177/0956797615626691 https://journals-sagepub-com.ez-proxy.brooklyn.cuny.edu/doi/full/10.1177/0956797615626691#_i2
+  
+
 
 \begingroup
 \setlength{\parindent}{-0.5in}
