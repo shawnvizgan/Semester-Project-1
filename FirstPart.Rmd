@@ -4,15 +4,71 @@ author: "Shawn Vizgan"
 date: "12/12/2020"
 output: html_document
 ---
+###Intro 
 
+The main question  of this paper was why do parents sing to their children? The hypothesis of this experiment was that songs have an important social meaning to growing infants, and thus investigates how they interact with different forms the song may come from. Experiment One was conducted to see whether the 5 month old infants (n=32) would pay attention to novel strangers who sang familiar songs they heard from their parent against novel strangers who sang unknown songs.
+
+
+https://journals.sagepub.com/stoken/default+domain/d5HcBHg85XamSXGdYqYN/full
 ```{r}
 
 library(data.table)
 all_data <- fread("https://raw.githubusercontent.com/CrumpLab/statisticsLab/master/data/MehrSongSpelke2016.csv")
 
 
+library(dplyr)
+library(ggplot2)
+
+experiment_one <- all_data %>% filter(exp1==1)
+
+baseline <- experiment_one$Baseline_Proportion_Gaze_to_Singer
+testphase <- experiment_one$Test_Proportion_Gaze_to_Singer
+
+t.test(testphase, baseline, paired = TRUE)
+
+
+```
+###Table of means 
+
+```{r}
+
+means <- experiment_one %>%
+  group_by(Baseline_Proportion_Gaze_to_Singer, Test_Proportion_Gaze_to_Singer)%>%
+  summarize(meanbaseline = mean(baseline_proportion_gaze_to_singer),
+            meantest = mean(test_proportion_gaze_to_singer))
+
+knitr::kable(means)
+
+
+
+
 
 
 
 ```
+###Graph 
+
+```{r}
+Phase <- rep(c("Baseline","Testphase"), each = 32)
+Proportions <- c(baseline,testphase)
+plot_df <- data.frame(Phase,Proportions)
+
+library(ggplot2)
+
+mean_df <- aggregate(Proportions ~ Phase, plot_df, mean)
+
+ggplot(plot_df, aes(x=Phase, y=Proportions))+ 
+  geom_bar(data=mean_df, stat="identity",aes(fill=Phase))+
+  geom_point()
+
+```
+
+
+
+
+
+
+###Reanalysis results
+
+We find here that on average, babies looked at the familiar song singer 7% longer than they had in the test condition.This is the same results as found in the original experiment. 
 
