@@ -16,12 +16,13 @@ affiliation:
     institution   : "Brooklyn College City University of New York"
 
 authornote: |
-Current Undergraduate at Brooklyn college, nothing special here
+Current Undergraduate at Brooklyn college, nothing special here:
+
 abstract: |
 This is a reanalysis of the first experiment of something something baby voice recognition
   
   <!-- https://tinyurl.com/ybremelq -->
-
+:
 keywords          : "sound, babies"
 wordcount         : "X"
 
@@ -95,7 +96,7 @@ pwr.t.test(n=32,
 ```   
 
 # Discussion
-
+The results of the original experiment coincide with our own, and our power analysis showed that for their limited sample size (which made sense, it is possibly not easy to get 5-6 month old babies to participate in a lab) they had a test with a low possibility of missing results that were significant. At least for this test there is some evidence that singing a familiar song, as their parents (largely the mothers of the infants) was related to babies spending more time on the novel singers who sang them.
 
 \newpage
 
