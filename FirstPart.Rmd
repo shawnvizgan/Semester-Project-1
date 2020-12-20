@@ -1,15 +1,38 @@
 ---
-title: "SP"
-author: "Shawn Vizgan"
-date: "12/12/2020"
-output: html_document
+title             : "Reanalyis of experiment one of Mehr S, Song L, and Spelke E 2016"
+shorttitle        : "Melody Test"
+
+author: 
+  - name          : "Shawn"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "619 Ave L"
+    email         : "sv942@hunter,cuny.edu"
+
+affiliation:
+  - id            : "1"
+    institution   : "Brooklyn College"
+
+bibliography      : ["r-references.bib","myreferences.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
 ---
-###Intro 
+    
+    
+```{r setup, include = FALSE}
+library("papaja")
+```
 
-The main question  of this paper was why do parents sing to their children? The hypothesis of this experiment was that songs have an important social meaning to growing infants, and thus investigates how they interact with different forms the song may come from. Experiment One was conducted to see whether the 5 month old infants (n=32) would pay attention to novel strangers who sang familiar songs they heard from their parent against novel strangers who sang unknown songs.
-
-
-https://journals.sagepub.com/stoken/default+domain/d5HcBHg85XamSXGdYqYN/full
 ```{r}
 
 library(data.table)

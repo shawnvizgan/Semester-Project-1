@@ -9,10 +9,7 @@ author:
     address       : "2900 Bedford Avenue"
     email         : "sv942@hunter.cuny.edu"
     
-  
-    affiliation   : "1,2"
-    role:
-      - Writing - Review & Editing
+
 
 affiliation:
   - id            : "1"
@@ -74,7 +71,7 @@ The details of the experiment are reported in Mehr SA 2016
 
 ## Procedure
 
-Parents were taught a song at the lab, and they would sing it to their children. At the lab, children were later introduced to two novel people over a screen, one who sang the sang they knew and one who didn', both of which were on screens that had recorded video of both singing their respective songs. Children were tracked for who they stared at longer. 
+Parents were taught a song at the lab, and they would sing it to their children. At the lab, children were later introduced to two novel people over a screen, one who sang the sang they knew and one who didn', both of which were on screens that had recorded video of both singing their respective songs. Children were tracked for who they stared/paid attention to for longer. 
 
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses.
