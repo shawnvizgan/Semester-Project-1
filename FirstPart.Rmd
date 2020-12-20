@@ -54,7 +54,6 @@ t.test(testphase, baseline, paired = TRUE)
 ###Table of means 
 
 ```{r}
-
 means <- experiment_one %>%
   group_by(Baseline_Proportion_Gaze_to_Singer, Test_Proportion_Gaze_to_Singer)%>%
   summarize(meanbaseline = mean(baseline_proportion_gaze_to_singer),
@@ -93,5 +92,5 @@ ggplot(plot_df, aes(x=Phase, y=Proportions))+
 
 ###Reanalysis results
 
-We find here that on average, babies looked at the familiar song singer 7% longer than they had in the test condition.This is the same results as found in the original experiment. 
+We find here that on average, babies looked at the familiar song singer 7% longer than they had in the test condition. This is the same as the results found in the original experiment.
 

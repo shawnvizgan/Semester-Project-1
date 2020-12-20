@@ -16,13 +16,12 @@ affiliation:
     institution   : "Brooklyn College City University of New York"
 
 authornote: |
- Current Undergraduate at Brooklyn college, nothing special here
-
+Current Undergraduate at Brooklyn college, nothing special here
 abstract: |
 This is a reanalysis of the first experiment of something something baby voice recognition
   
   <!-- https://tinyurl.com/ybremelq -->
-  
+
 keywords          : "sound, babies"
 wordcount         : "X"
 
@@ -54,7 +53,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 ```
 #Abstract
-This is a reproduction of experiment 1 of For 5-Month-Old Infants, Melodies Are Social" by Samuel A. Mehr, Lee Ann Song, Elizabeth S. Spelke. In their experiment, they had the parents of 32 infants learn a song and later sing it to their children.On a later date the babies attention was tracked for how long they focused on the song their parents sang or a novel song, both songs being sung by an unfamiliar person. Results found that Babies spent more time looking at people who sang familiar songs than those who didn't.
+This is a reproduction of experiment 1 of For 5-Month-Old Infants, Melodies Are Social" by Samuel A. Mehr, Lee Ann Song, Elizabeth S. Spelke. In their experiment, they had the parents of 32 infants learn a song and later sing it to their children.On a later date the babies attention was tracked for how long they focused on the song their parents sang or a novel song, both songs being sung by an unfamiliar person. Results found that Babies spent more time looking at people who sang familiar songs than those who didn't. A 
 #Introduction
 The purpose of this (re)-analysis is to see whether or not it is possible to reproduce the results of experiment 1 of "For 5-Month-Old Infants, Melodies Are Social" by Samuel A. Mehr, Lee Ann Song, Elizabeth S. Spelke.
 
@@ -73,6 +72,8 @@ The details of the experiment are reported in Mehr SA 2016
 
 Parents were taught a song at the lab, and they would sing it to their children. At the lab, children were later introduced to two novel people over a screen, one who sang the sang they knew and one who didn', both of which were on screens that had recorded video of both singing their respective songs. Children were tracked for who they stared/paid attention to for longer. 
 
+A t-test for their data was run for the means of the baseline and test phase gazes toward the familiar singer
+
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses.
 
@@ -81,10 +82,20 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 Reanalysis of experiment one shows that babies paid more attention to the song that was sung by their parents, and supports the hypothesis, as if there were no effect they would have just stared at both singers at relatively equivalent rates with no increase 
 
-(need power anaylsis to analyse effect size and how participant size realtes to the results)
- 
+A power anaylsis for an effect size of .54 and a group of 32 participants give us a power of 84%, which means 84% of the time the original test would have been able to detect the results of this test. The other times it would be liable to miss it.
+
+
+```{r}
+library(pwr)
+pwr.t.test(n=32,
+           d=.54,
+           sig.level=.05,
+           type="paired",
+           alternative="two.sided")
+```   
+
 # Discussion
-(Need to do a power analysis before I get into the discussion part)
+
 
 \newpage
 
