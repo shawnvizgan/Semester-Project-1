@@ -16,13 +16,13 @@ affiliation:
     institution   : "Brooklyn College City University of New York"
 
 authornote: |
-Current Undergraduate at Brooklyn college, nothing special here:
+  Current Undergraduate at Brooklyn college, nothing special here:
 
 abstract: |
-This is a reanalysis of the first experiment of something something baby voice recognition
+  This is a reanalysis of the first experiment of something something baby voice recognition
   
   <!-- https://tinyurl.com/ybremelq -->
-:
+
 keywords          : "sound, babies"
 wordcount         : "X"
 

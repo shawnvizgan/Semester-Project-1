@@ -37,10 +37,10 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={The title},
-  pdfauthor={First Author1 \& Ernst-August Doelle1,2},
+  pdftitle={Reproducing the Report of},
+  pdfauthor={Shawn Vizganr1},
   pdflang={en-EN},
-  pdfkeywords={keywords},
+  pdfkeywords={sound, babies},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
@@ -111,8 +111,8 @@
   {\section*{\protect\normalfont{\@title}}}
   {}{\typeout{Failed to patch title.}}
 \makeatother
-\shorttitle{Title}
-\keywords{keywords\newline\indent Word count: X}
+\shorttitle{Something Analyis}
+\keywords{sound, babies\newline\indent Word count: X}
 \DeclareDelayedFloatFlavor{ThreePartTable}{table}
 \DeclareDelayedFloatFlavor{lltable}{table}
 \DeclareDelayedFloatFlavor*{longtable}{table}
@@ -131,39 +131,23 @@
   \usepackage[shorthands=off,main=english]{babel}
 \fi
 
-\title{The title}
-\author{First Author\textsuperscript{1} \& Ernst-August Doelle\textsuperscript{1,2}}
+\title{Reproducing the Report of}
+\author{Shawn Vizganr\textsuperscript{1}}
 \date{}
 
 
 \authornote{
 
-Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+Current Undergraduate at Brooklyn college, nothing special here:
 
-Enter author note here.
-
-The authors made the following contributions. First Author: Conceptualization, Writing - Original Draft Preparation, Writing - Review \& Editing; Ernst-August Doelle: Writing - Review \& Editing.
-
-Correspondence concerning this article should be addressed to First Author, Postal address. E-mail: \href{mailto:my@email.com}{\nolinkurl{my@email.com}}
+Correspondence concerning this article should be addressed to Shawn Vizganr, 2900 Bedford Avenue. E-mail: \href{mailto:sv942@hunter.cuny.edu}{\nolinkurl{sv942@hunter.cuny.edu}}
 
 }
 
-\affiliation{\vspace{0.5cm}\textsuperscript{1} Wilhelm-Wundt-University\\\textsuperscript{2} Konstanz Business School}
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Brooklyn College City University of New York}
 
 \abstract{
-One or two sentences providing a \textbf{basic introduction} to the field, comprehensible to a scientist in any discipline.
-
-Two to three sentences of \textbf{more detailed background}, comprehensible to scientists in related disciplines.
-
-One sentence clearly stating the \textbf{general problem} being addressed by this particular study.
-
-One sentence summarizing the main result (with the words ``\textbf{here we show}'' or their equivalent).
-
-Two or three sentences explaining what the \textbf{main result} reveals in direct comparison to what was thought to be the case previously, or how the main result adds to previous knowledge.
-
-One or two sentences to put the results into a more \textbf{general context}.
-
-Two or three sentences to provide a \textbf{broader perspective}, readily comprehensible to a scientist in any discipline.
+This is a reanalysis of the first experiment of something something baby voice recognition
 }
 
 
@@ -171,35 +155,72 @@ Two or three sentences to provide a \textbf{broader perspective}, readily compre
 \begin{document}
 \maketitle
 
-\hypertarget{methods}{%
-\section{Methods}\label{methods}}
+\#Abstract
+This is a reproduction of experiment 1 of For 5-Month-Old Infants, Melodies Are Social" by Samuel A. Mehr, Lee Ann Song, Elizabeth S. Spelke. In their experiment, they had the parents of 32 infants learn a song and later sing it to their children.On a later date the babies attention was tracked for how long they focused on the song their parents sang or a novel song, both songs being sung by an unfamiliar person. Results found that Babies spent more time looking at people who sang familiar songs than those who didn't. A
+\#Introduction
+The purpose of this (re)-analysis is to see whether or not it is possible to reproduce the results of experiment 1 of \enquote{For 5-Month-Old Infants, Melodies Are Social} by Samuel A. Mehr, Lee Ann Song, Elizabeth S. Spelke.
 
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study.
+In their experiment, they were interested in the important social role singing and melodies have had across the ages, especially before the time when it was recorded with audio. As in the past and even in many present societies different songs have various social purposes, what could they mean to newborn babies? This study has several experiments comparing melodies and how they get transmitted, whether by parents, toys, or strangers, and what sort of effect they have on the attention spans of the babies.
 
 \hypertarget{participants}{%
 \subsection{Participants}\label{participants}}
 
+There were 32 participants, all of which were 5 month old infants. Parents of the infants were used to teach the songs to their children.
+
 \hypertarget{material}{%
 \subsection{Material}\label{material}}
+
+The details of the experiment are reported in Mehr SA 2016
 
 \hypertarget{procedure}{%
 \subsection{Procedure}\label{procedure}}
 
+Parents were taught a song at the lab, and they would sing it to their children. At the lab, children were later introduced to two novel people over a screen, one who sang the sang they knew and one who didn', both of which were on screens that had recorded video of both singing their respective songs. Children were tracked for who they stared/paid attention to for longer.
+
+A t-test for their data was run for the means of the baseline and test phase gazes toward the familiar singer
+
 \hypertarget{data-analysis}{%
 \subsection{Data analysis}\label{data-analysis}}
 
-We used R (Version 4.0.2; R Core Team, 2020) and the R-package \emph{papaja} (Version 0.1.0.9997; Aust \& Barth, 2020) for all our analyses.
+We used R (Version 4.0.2; R Core Team, 2020) and the R-packages \emph{papaja} (Version 0.1.0.9997; Aust \& Barth, 2020), and \emph{pwr} (Version 1.3.0; Champely, 2020) for all our analyses.
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
+Reanalysis of experiment one shows that babies paid more attention to the song that was sung by their parents, and supports the hypothesis, as if there were no effect they would have just stared at both singers at relatively equivalent rates with no increase
+
+A power anaylsis for an effect size of .54 and a group of 32 participants give us a power of 84\%, which means 84\% of the time the original test would have been able to detect the results of this test. The other times it would be liable to miss it.
+
+\begin{verbatim}
+## Warning: package 'pwr' was built under R version 4.0.3
+\end{verbatim}
+
+\begin{verbatim}
+## 
+##      Paired t test power calculation 
+## 
+##               n = 32
+##               d = 0.54
+##       sig.level = 0.05
+##           power = 0.8410715
+##     alternative = two.sided
+## 
+## NOTE: n is number of *pairs*
+\end{verbatim}
+
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
+
+The results of the original experiment coincide with our own, and our power analysis showed that for their limited sample size (which made sense, it is possibly not easy to get 5-6 month old babies to participate in a lab) they had a test with a low possibility of missing results that were significant. At least for this test there is some evidence that singing a familiar song, as their parents (largely the mothers of the infants) was related to babies spending more time on the novel singers who sang them.
 
 \newpage
 
 \hypertarget{references}{%
 \section{References}\label{references}}
+
+\begin{verbatim}
+1. Mehr SA, Song LA, Spelke ES. For 5-Month-Old Infants, Melodies Are Social. Psychological Science. 2016;27(4):486-501. doi:10.1177/0956797615626691 https://journals-sagepub-com.ez-proxy.brooklyn.cuny.edu/doi/full/10.1177/0956797615626691#_i2
+\end{verbatim}
 
 \begingroup
 \setlength{\parindent}{-0.5in}
@@ -208,6 +229,9 @@ We used R (Version 4.0.2; R Core Team, 2020) and the R-package \emph{papaja} (Ve
 \hypertarget{refs}{}
 \leavevmode\hypertarget{ref-R-papaja}{}%
 Aust, F., \& Barth, M. (2020). \emph{papaja: Create APA manuscripts with R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
+
+\leavevmode\hypertarget{ref-R-pwr}{}%
+Champely, S. (2020). \emph{Pwr: Basic functions for power analysis}. Retrieved from \url{https://CRAN.R-project.org/package=pwr}
 
 \leavevmode\hypertarget{ref-R-base}{}%
 R Core Team. (2020). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}

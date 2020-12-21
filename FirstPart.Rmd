@@ -1,34 +1,10 @@
 ---
-title             : "Reanalyis of experiment one of Mehr S, Song L, and Spelke E 2016"
-shorttitle        : "Melody Test"
-
-author: 
-  - name          : "Shawn"
-    affiliation   : "1"
-    corresponding : yes    # Define only one corresponding author
-    address       : "619 Ave L"
-    email         : "sv942@hunter,cuny.edu"
-
-affiliation:
-  - id            : "1"
-    institution   : "Brooklyn College"
-
-bibliography      : ["r-references.bib","myreferences.bib"]
-
-floatsintext      : no
-figurelist        : no
-tablelist         : no
-footnotelist      : no
-linenumbers       : no
-mask              : no
-draft             : no
-
-documentclass     : "apa6"
-classoption       : "man"
-output            : papaja::apa6_pdf
+title: "FirstPart.Rmd"
+author: "Shawn Vizgan"
+date: "12/21/2020"
+output: html_document
 ---
-    
-    
+
 ```{r setup, include = FALSE}
 library("papaja")
 ```
@@ -54,20 +30,25 @@ t.test(testphase, baseline, paired = TRUE)
 ###Table of means 
 
 ```{r}
-means <- experiment_one %>%
-  group_by(Baseline_Proportion_Gaze_to_Singer, Test_Proportion_Gaze_to_Singer)%>%
-  summarize(meanbaseline = mean(baseline_proportion_gaze_to_singer),
-            meantest = mean(test_proportion_gaze_to_singer))
+
+
+
+
+means <- data.frame(baseline = c(mean(baseline)),
+                    testphase = c(mean(testphase)))
+    
+
+
+
+
+
+
 
 knitr::kable(means)
 
 
-
-
-
-
-
 ```
+
 ###Graph 
 
 ```{r}
@@ -93,4 +74,3 @@ ggplot(plot_df, aes(x=Phase, y=Proportions))+
 ###Reanalysis results
 
 We find here that on average, babies looked at the familiar song singer 7% longer than they had in the test condition. This is the same as the results found in the original experiment.
-
